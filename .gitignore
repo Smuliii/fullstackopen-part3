@@ -1,2 +1,5 @@
 # VS Code
 *.code-workspace
+
+# dependencies
+/node_modules
