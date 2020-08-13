@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-ui": "cd ../fullstackopen/part2/phonebook && npm run build && robocopy build/ ../../../fullstackopen-part3/build/ /mir & exit 0",
+    "deploy": "git add . && git commit -m \"build-ui\" && git push heroku master",
+    "logs": "heroku logs --tail"
   },
   "author": "Samuli Saarinen",
   "license": "ISC",
