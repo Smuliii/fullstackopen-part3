@@ -2,6 +2,7 @@
 
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3001;
@@ -15,6 +16,7 @@ morgan.token('post-data', (req, res) => {
 
 app.use(express.json());
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :post-data'));
+app.use(cors());
 
 let phonebook = [{
 		"name": "Arto Hellas",
